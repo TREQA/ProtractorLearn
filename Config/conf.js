@@ -6,8 +6,8 @@ exports.config = {
     multiCapabilities: [
         {
           'browserName' : 'chrome',
-          shardTestFiles: true,
-          maxInstances: 3,
+          //shardTestFiles: true,
+          //maxInstances: 3,
         },
         /*{
           'browserName' : 'firefox'
@@ -18,11 +18,18 @@ exports.config = {
     
 
     // Framework to use. Jasmine is recommended.
-    framework: 'jasmine',
+    framework: 'jasmine2',
 
     //set windows size
     onPrepare: function() {
-       browser.driver.manage().window().maximize();
+        var jasmineReporters = require('jasmine-reporters');
+        jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+            consolidateAll: true,
+            savePath: '../',
+            filePrefix: 'xmloutput'
+        }));
+
+        browser.driver.manage().window().maximize();
     },
 
     // Spec patterns are relative to the current working directory when

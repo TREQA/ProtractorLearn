@@ -1,0 +1,22 @@
+{
+  "name": "com.protractor.learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tremend-Testing/ProtractorLearn.git"
+  },
+  "author": "Gurau Daniel Dumitru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tremend-Testing/ProtractorLearn/issues"
+  },
+  "homepage": "https://github.com/Tremend-Testing/ProtractorLearn#readme",
+  "devDependencies": {
+    "jasmine-reporters": "^2.0.0"
+  }
+}
