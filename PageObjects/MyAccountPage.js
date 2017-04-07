@@ -4,8 +4,8 @@ var MyAccountPage = function(){
 
 //WebElements
 var myAccount = element(by.id('login-dropdown-toggle'));
-var usernameField = element(by.model('email'));
-var passwordField = element(by.model('password'));
+var usernameField = element(by.model('vm.email'));
+var passwordField = element(by.model('vm.password'));
 var loginButton = element(by.xpath("//*[@id='login']/div/button"));
 var logoutButton = element(by.xpath("//*[@class = 'user-account-data']/span"));
 var informativeMessage = element(by.xpath("//*[@class = 'message ng-binding']"));
