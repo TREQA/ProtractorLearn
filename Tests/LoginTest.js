@@ -16,7 +16,7 @@ describe("Login Tests", function(){
 
 		expect(myAccountPage.getMyAccName()).toEqual("Cojoace Cojoacele");
 		expect(myAccountPage.getInfoMessage()).toContain(DataItems.welcomeMessage);
-	});
+	},300000);
 
 	it('Log Out functionality',function(){
         console.log("User Logged in. Checking Log out function");

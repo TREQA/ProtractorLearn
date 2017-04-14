@@ -5,12 +5,12 @@ exports.config = {
     // Capabilities to be passed to the webdriver instance.
     multiCapabilities: [
         {
-          'browserName' : 'chrome',
-          //shardTestFiles: true,
-          //maxInstances: 3,
+            'browserName' : 'chrome',
+            /*shardTestFiles: true,
+            maxInstances: 3,*/
         },
         /*{
-          'browserName' : 'firefox'
+            'browserName' : 'firefox'
         }*/
     ],
 
@@ -39,8 +39,8 @@ exports.config = {
     specs:["../Tests/*Test.js"],
 
     suites: {
-      login: ['../Tests/LoginTest.js'],
-      myAccount: ['../Tests/MyAccountSpaceTest.js'],
+      login: ['../Tests/LoginTest.js','../Tests/MyAccountSpaceTest.js'],
+      myAccount: ['../Tests/*Test.js'],
       search: ['../Tests/SearchTest.js'],
       //search: ['tests/e2e/contact_search/**/*Spec.js']
     },
