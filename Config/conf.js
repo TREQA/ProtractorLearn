@@ -13,6 +13,7 @@ exports.config = {
             'browserName' : 'firefox'
         }*/
     ],
+    //restartBrowserBetweenTests:true,
 
     //How many Tests to run at once
     

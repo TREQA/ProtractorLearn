@@ -5,9 +5,9 @@ describe("Login Tests", function(){
     var DataItems = require('../AutomationFrameWork/DataItems.js');
     var base = require('../AutomationFrameWork/BaseLogin.js');
 
-	/*beforeEach(function(){
-	    myAccountPage.getAdress();
-	});*/
+	beforeEach(function(){
+	     browser.driver.manage().deleteAllCookies(); //this slows the tests a bit but it makes them more reliable
+	});
 
 	it('Login Good credentials',function(){
 		console.log("Login using Valid credentials...");
@@ -19,7 +19,9 @@ describe("Login Tests", function(){
 	},300000);
 
 	it('Log Out functionality',function(){
-        console.log("User Logged in. Checking Log out function");
+	    base.loginAs(DataItems.validUsername,DataItems.validPassword);
+
+        console.log("User Logged in. Checking Log out function...");
 
         myAccountPage.clickLogout();
 
