@@ -4,9 +4,10 @@ describe("Login Tests", function(){
 	var myAccountPage = require('../PageObjects/MyAccountPage.js');
     var DataItems = require('../AutomationFrameWork/DataItems.js');
     var base = require('../AutomationFrameWork/BaseLogin.js');
+    var CommonTask = require ("../AutomationFrameWork/CommonTask.js");
 
 	beforeEach(function(){
-	     browser.driver.manage().deleteAllCookies(); //this slows the tests a bit but it makes them more reliable
+	    CommonTask.deleteCookies();
 	});
 
 	it('Login Good credentials',function(){
